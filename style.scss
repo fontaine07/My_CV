@@ -1,0 +1,172 @@
+//font imports
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500);
+
+//variables
+//$bg: #DDE5E7
+//$dark: #022534
+$heather: #A0BACC;
+$astronaut-blue: #204254;
+$apple-blossom: #AC5142;
+//$link-color: #1B98E0
+//$link-hover: #13293D
+$font-heading: #006494;
+$font-family: 'Josefin Sans', cwtexyen, sans-serif;
+$heading-font: 'Source Code Pro', monospace;
+$font-heading-size: 50px;
+$tag-pri: #B94A3E;
+$tag-sec: #F0F6FB;
+$h1-break-width: 550px;
+
+// mixins
+@mixin tag {
+  display: inline-block;
+  padding: 10px;
+  background: $back;
+  color: $font;
+  margin: 5px;
+  border-radius: 5px;
+}
+// document css
+body{
+  box-sizing: border-box;
+  color: #000000;
+  font-family: $font-family;
+}
+/*a
+  text-decoration: none
+  color: $link-color
+  &:hover
+    color: $link-hover
+*/    
+.wrapper{
+  margin: 5% 10%;
+}    
+.heading{
+  background-color: $tag-pri;
+  padding: 5%;
+  text-align: center;
+  h1{
+    margin: 0 auto;
+    font-family: $heading-font;
+    font-size: $font-heading-size;
+    font-weight: 500;
+    border: solid 3px #FFFFFF;
+  }
+    @media screen and (max-width: $h1-break-width){
+      font-size: 30px;
+    }
+}      
+.sm-name{
+  display: none;
+  color: $font-heading;
+  @media screen and (max-width: $h1-break-width){
+    display: block;
+  }
+}
+.name{
+  margin-top: 10px;
+  height: $font-heading-size + 2px;
+  overflow: hidden;
+  @media screen and (max-width: $h1-break-width){
+    display: none
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: $font-heading-size;
+    li{
+      padding-top: 5px;
+      line-height: $font-heading-size + 2px;
+    }
+  }
+}
+.social ul{
+  list-style: none;
+  padding-left: 0;
+  a{
+    color: #FFFFFF;
+  }
+  li{
+    display: inline-block;
+    margin: 0 5px;
+  }
+  span{
+    line-height: 36px;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+}
+.block{
+  h2::first-letter{
+    font-size: 35px;
+    color: $apple-blossom;
+  }
+  h2{
+    font-family: $heading-font;
+    border-bottom: 2px solid $heather;
+    color: #000000;
+  }
+  ul{
+    list-style: none;
+    padding-left: 0;
+  }
+  
+.pri-tag{
+  @include tag($tag-pri, $tag-sec);
+}
+
+.sec-tag{
+  @include tag($tag-sec, $tag-pri);
+}
+
+/*.about
+  p::before
+    content: '\00a0\00a0\00a0\00a0'*/
+
+.footer{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $astronaut-blue;
+  color: #FFFFFF;
+  text-align: right;
+  height: 100px;
+  padding: 7px 7px;
+}
+  
+.degree{
+  h3{
+    margin: 10px 0 5px 0;
+    padding: 0;
+    line-height: 36px;
+  }
+  p{
+    margin: 0;
+    padding: 0;
+  }
+}
+.activities{
+  ul{
+    list-style: square;
+    padding-left: 15px;
+  
+    li{
+      padding-top: 5px;
+    }
+  }
+}  
+
+.profile{
+  background-size: 150%;
+  background-position: center;
+  border-radius: 50%;
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-image: url(https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-6/275053008_977953286493637_242022588487023359_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=0debeb&_nc_ohc=WFUxx7HS0G0AX9G9IAk&_nc_ht=scontent.fsgn5-13.fna&oh=00_AT9Np12JVP0S6noPTwFU87TCYRaLNJtGpl9GmvMRG0sFnw&oe=6227F13F);
+}
+}

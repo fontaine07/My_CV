@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexyen.css');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500');
+@-webkit-keyframes change-text {
+  0%, 55%, 100% {
+    -webkit-transform: translateY(-45%);
+            transform: translateY(-45%);
+  }
+  5%, 50% {
+    -webkit-transform: translateY(-95%);
+            transform: translateY(-95%);
+  }
+}
+@keyframes change-text {
+  0%, 55%, 100% {
+    -webkit-transform: translateY(-45%);
+            transform: translateY(-45%);
+  }
+  5%, 50% {
+    -webkit-transform: translateY(-95%);
+            transform: translateY(-95%);
+  }
+}
+
+@-webkit-keyframes typing {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes text-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes text-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #000000;
+  font-family: "Josefin Sans", cwtexyen, sans-serif;
+}
+
+/*a
+  text-decoration: none
+  color: $link-color
+  &:hover
+    color: $link-hover */
+.wrapper {
+  margin: 5% 10%;
+}
+
+.heading {
+  background-color: #B94A3E;
+  padding: 5%;
+  text-align: center;
+}
+
+.heading h1 {
+  margin: 0 auto;
+  font-family: "Source Code Pro", monospace;
+  font-size: 50px;
+  font-weight: 500;
+  border: solid 3px #FFFFFF;
+  --webkit-animation: 8s typing steps(16, end), 1s text-blink step-end infinite;
+          animation: 8s typing steps(16, end), 1s text-blink step-end infinite;
+  width: 9.6em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #FFFFFF;
+}
+
+@media screen and (max-width: 550px) {
+  .heading h1 {
+    font-size: 30px;
+  }
+}
+
+.sm-name {
+  display: none;
+  color: #006494;
+}
+
+@media screen and (max-width: 550px) {
+  .sm-name {
+    display: block;
+  }
+}
+
+.name {
+  margin-top: 10px;
+  height: 52px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 550px) {
+  .name {
+    display: none;
+  }
+}
+
+.name ul {
+  list-style: none;
+  padding: 0;
+  color: #FFFFFF;
+  font-size: 50px;
+  -webkit-animation: 7s change-text linear infinite;
+          animation: 7s change-text linear infinite;
+}
+
+.name ul li {
+  padding-top: 5px;
+  line-height: 52px;
+}
+
+.social ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.social ul a {
+  color: #FFFFFF;
+}
+
+.social ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.social ul span {
+  line-height: 36px;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.block h2::first-letter {
+  font-size: 35px;
+  color: #AC5142;
+}
+
+.block h2 {
+  font-family: "Source Code Pro", monospace;
+  border-bottom: 2px solid #A0BACC;
+  color: #000000;
+}
+
+.block ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pri-tag {
+  display: inline-block;
+  padding: 10px;
+  background: #B94A3E;
+  color: #F0F6FB;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.sec-tag {
+  display: inline-block;
+  padding: 10px;
+  background: #F0F6FB;
+  color: #B94A3E;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/*.about
+  p::before
+    content: '\00a0\00a0\00a0\00a0' */
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #204254;
+  color: #FFFFFF;
+  text-align: right;
+  height: 100px;
+  padding: 7px 7px;
+}
+
+.degree h3 {
+  margin: 10px 0 5px 0;
+  padding: 0;
+  line-height: 36px;
+}
+
+.degree p {
+  margin: 0;
+  padding: 0;
+}
+
+.activities ul {
+  list-style: square;
+  padding-left: 15px;
+}
+
+.activities ul li {
+  padding-top: 5px;
+}
+
+.profile {
+  background-size: 100%;
+  background-position: top;
+  border-radius: 50%;
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-image: url(https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-6/275697075_984532039169095_7908479892457854240_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=eLquXT4dNeMAX-8v2gX&_nc_ht=scontent.fsgn5-13.fna&oh=00_AT-tuptKfYxxhAV_6tiKcFBjQAKqnQVcwSm_JHgXSHcneg&oe=62360E6B);
+}
+/*# sourceMappingURL=style.css.map */
