@@ -1,227 +1,199 @@
-@import url('https://fonts.googleapis.com/earlyaccess/cwtexyen.css');
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500');
-@-webkit-keyframes change-text {
-  0%, 55%, 100% {
-    -webkit-transform: translateY(-45%);
-            transform: translateY(-45%);
-  }
-  5%, 50% {
-    -webkit-transform: translateY(-95%);
-            transform: translateY(-95%);
-  }
-}
-@keyframes change-text {
-  0%, 55%, 100% {
-    -webkit-transform: translateY(-45%);
-            transform: translateY(-45%);
-  }
-  5%, 50% {
-    -webkit-transform: translateY(-95%);
-            transform: translateY(-95%);
-  }
-}
-
-@-webkit-keyframes typing {
-  0% {
-    width: 0;
-  }
-}
-
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-}
-
-@-webkit-keyframes text-blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes text-blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #000000;
   font-family: "Josefin Sans", cwtexyen, sans-serif;
+  line-height: 1.4;
 }
 
-/*a
-  text-decoration: none
-  color: $link-color
-  &:hover
-    color: $link-hover */
-.wrapper {
-  margin: 5% 10%;
+.cv {
+  background-color: #fff;
+  border-top: 5px solid #2F4E68;
+  max-width: 992px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px 15px;
+  -webkit-box-shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.3);
 }
 
-.heading {
-  background-color: #B94A3E;
-  padding: 5%;
-  text-align: center;
+.cv-header {
+  margin-bottom: 50px;
 }
 
-.heading h1 {
-  margin: 0 auto;
-  font-family: "Source Code Pro", monospace;
-  font-size: 50px;
-  font-weight: 500;
-  border: solid 3px #FFFFFF;
-  --webkit-animation: 8s typing steps(16, end), 1s text-blink step-end infinite;
-          animation: 8s typing steps(16, end), 1s text-blink step-end infinite;
-  width: 9.6em;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #FFFFFF;
-}
-
-@media screen and (max-width: 550px) {
-  .heading h1 {
-    font-size: 30px;
-  }
-}
-
-.sm-name {
-  display: none;
-  color: #006494;
-}
-
-@media screen and (max-width: 550px) {
-  .sm-name {
-    display: block;
-  }
-}
-
-.name {
-  margin-top: 10px;
-  height: 52px;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 550px) {
-  .name {
-    display: none;
-  }
-}
-
-.name ul {
-  list-style: none;
-  padding: 0;
-  color: #FFFFFF;
-  font-size: 50px;
-  -webkit-animation: 7s change-text linear infinite;
-          animation: 7s change-text linear infinite;
-}
-
-.name ul li {
-  padding-top: 5px;
-  line-height: 52px;
-}
-
-.social ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.social ul a {
-  color: #FFFFFF;
-}
-
-.social ul li {
+.cv-header__img {
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+  margin-right: 15px;
   display: inline-block;
-  margin: 0 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.social ul span {
-  line-height: 36px;
-  vertical-align: top;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.cv-header__text-container {
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.block h2::first-letter {
-  font-size: 35px;
-  color: #AC5142;
+.cv-header__name {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: #263E53;
 }
 
-.block h2 {
-  font-family: "Source Code Pro", monospace;
-  border-bottom: 2px solid #A0BACC;
-  color: #000000;
+.cv-header__job-title {
+  color: #464646;
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
-.block ul {
-  list-style: none;
+.cv-section {
+  border-bottom: 1px solid #F4F4F4;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.cv-section__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.cv-section__title .fa-solid, .cv-section__title .fas, .cv-section__title .fa {
+  margin-right: 2px;
+  color: #A0BACC;
+  font-size: 25px;
+}
+
+h2:first-letter {
+  color: #A0BACC;
+  font-size: 25px;
+}
+
+.cv-section__wrapper {
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+}
+
+.cv-section__experience {
+  margin-bottom: 25px;
+}
+
+.cv-section__role {
+  font-size: 18.5px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.cv-section__description {
+  font-size: 17px;
+}
+
+.cv-section__period {
+  color: #6B6B6B;
+  font-style: italic;
+  margin-bottom: 0;
+  font-size: 17px;
+}
+
+.cv-sidebar-section {
+  margin-bottom: 20px;
+}
+
+.cv-sidebar-section ul {
+  line-height: 30px;
   padding-left: 0;
+  font-size: 17px;
+}
+
+.cv-sidebar-section__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+h3 {
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cv-sidebar-section__description {
+  font-size: 17px;
+  margin-bottom: 0;
 }
 
 .pri-tag {
   display: inline-block;
-  padding: 10px;
-  background: #B94A3E;
-  color: #F0F6FB;
+  padding: 5px;
+  background: #2F4E68;
+  color: #F4F4F4;
   margin: 5px;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 .sec-tag {
   display: inline-block;
-  padding: 10px;
-  background: #F0F6FB;
-  color: #B94A3E;
+  padding: 5px;
+  background: #F4F4F4;
+  color: #2F4E68;
   margin: 5px;
   border-radius: 5px;
+  border: 1px solid #2F4E68;
+  font-size: 16px;
 }
 
-/*.about
-  p::before
-    content: '\00a0\00a0\00a0\00a0' */
-.footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #204254;
-  color: #FFFFFF;
-  text-align: right;
-  height: 100px;
-  padding: 7px 7px;
+@media only screen and (min-width: 400px) {
+  .cv-header__img {
+    display: inline-block;
+  }
 }
 
-.degree h3 {
-  margin: 10px 0 5px 0;
-  padding: 0;
-  line-height: 36px;
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: #2F4E68;
+  }
+  .cv-header__img {
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+  }
+  .cv-section {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .cv-section:hover .cv-section__wrapper {
+    border-left-color: #A0BACC;
+  }
+  .cv-section__title {
+    margin-bottom: 20px;
+  }
+  .cv-section__title .fa, .cv-section__title .fas {
+    margin-right: 9px;
+  }
+  .cv-section__wrapper {
+    border-left: 2px solid #eee;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
-.degree p {
-  margin: 0;
-  padding: 0;
+@media only screen and (min-width: 992px) {
+  .cv {
+    border-top: none;
+    border-radius: 2px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 70px 50px;
+  }
 }
 
-.activities ul {
-  list-style: square;
-  padding-left: 15px;
-}
-
-.activities ul li {
-  padding-top: 5px;
-}
-
-.profile {
-  background-size: 100%;
-  background-position: top;
-  border-radius: 50%;
-  margin: 20px auto;
-  width: 150px;
-  height: 150px;
-  display: inline-block;
-  background-image: url(https://i.ibb.co/7RCpTwd/LeoChibi.png);
+@media print {
+  .cv {
+    border-top: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
